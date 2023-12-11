@@ -110,7 +110,7 @@ export default function Sidebar() {
                                     <div className="flex h-16 shrink-0 items-center">
                                         <Image
                                             className="h-8 w-auto"
-                                            src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=600"
+                                            src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=700"
                                             alt="Your Company"
                                             width={32}
                                             height={32}
@@ -127,14 +127,14 @@ export default function Sidebar() {
                                                                 href={item.href}
                                                                 className={classNames(
                                                                     item.current
-                                                                        ? 'bg-neutral-50 text-cyan-600'
-                                                                        : 'text-neutral-700 hover:text-cyan-600 hover:bg-neutral-50',
+                                                                        ? 'bg-neutral-50 text-cyan-700'
+                                                                        : 'text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50',
                                                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                                 )}
                                                             >
                                                                 <item.icon
                                                                     className={classNames(
-                                                                        item.current ? 'text-cyan-600' : 'text-neutral-400 group-hover:text-cyan-600',
+                                                                        item.current ? 'text-cyan-700' : 'text-neutral-500 group-hover:text-cyan-700',
                                                                         'h-6 w-6 shrink-0'
                                                                     )}
                                                                     aria-hidden="true"
@@ -146,7 +146,7 @@ export default function Sidebar() {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <div className="text-xs font-semibold leading-6 text-neutral-400">Management</div>
+                                                <div className="text-xs font-semibold leading-6 text-neutral-500">Management</div>
                                                 <ul role="list" className="-mx-2 mt-2 space-y-1">
                                                     {secondaryNavigation.map((item) => (
                                                         <li key={item.name}>
@@ -154,14 +154,14 @@ export default function Sidebar() {
                                                                 href={item.href}
                                                                 className={classNames(
                                                                     item.current
-                                                                        ? 'bg-neutral-50 text-cyan-600'
-                                                                        : 'text-neutral-700 hover:text-cyan-600 hover:bg-neutral-50',
+                                                                        ? 'bg-neutral-50 text-cyan-700'
+                                                                        : 'text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50',
                                                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                                 )}
                                                             >
                                                                 <item.icon
                                                                     className={classNames(
-                                                                        item.current ? 'text-cyan-600' : 'text-neutral-400 group-hover:text-cyan-600',
+                                                                        item.current ? 'text-cyan-700' : 'text-neutral-500 group-hover:text-cyan-700',
                                                                         'h-6 w-6 shrink-0'
                                                                     )}
                                                                     aria-hidden="true"
@@ -180,14 +180,14 @@ export default function Sidebar() {
                                                                 href={item.href}
                                                                 className={classNames(
                                                                     item.current
-                                                                        ? 'bg-neutral-50 text-cyan-600'
-                                                                        : 'text-neutral-700 hover:text-cyan-600 hover:bg-neutral-50',
+                                                                        ? 'bg-neutral-50 text-cyan-700'
+                                                                        : 'text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50',
                                                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                                 )}
                                                             >
                                                                 <item.icon
                                                                     className={classNames(
-                                                                        item.current ? 'text-cyan-600' : 'text-neutral-400 group-hover:text-cyan-600',
+                                                                        item.current ? 'text-cyan-700' : 'text-neutral-500 group-hover:text-cyan-700',
                                                                         'h-6 w-6 shrink-0'
                                                                     )}
                                                                     aria-hidden="true"
@@ -199,7 +199,7 @@ export default function Sidebar() {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <div className="text-xs text-neutral-400 mb-6 text-center">Server Version: {version}</div>
+                                                <div className="text-xs text-neutral-500 mb-6 text-center">Server Version: {version}</div>
                                             </li>
                                         </ul>
                                     </nav>
@@ -217,7 +217,7 @@ export default function Sidebar() {
                     <div className="flex h-16 shrink-0 items-center">
                         <Image
                             className="h-8 w-auto"
-                            src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=600"
+                            src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=700"
                             alt="Your Company"
                             width={32}
                             height={32}
@@ -234,14 +234,14 @@ export default function Sidebar() {
                                                 href={item.href}
                                                 className={classNames(
                                                     item.current
-                                                        ? 'bg-neutral-50 text-cyan-600'
-                                                        : 'text-neutral-700 hover:text-cyan-600 hover:bg-neutral-50',
+                                                        ? 'bg-neutral-50 text-cyan-700'
+                                                        : 'text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50',
                                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                 )}
                                             >
                                                 <item.icon
                                                     className={classNames(
-                                                        item.current ? 'text-cyan-600' : 'text-neutral-400 group-hover:text-cyan-600',
+                                                        item.current ? 'text-cyan-700' : 'text-neutral-500 group-hover:text-cyan-700',
                                                         'h-6 w-6 shrink-0'
                                                     )}
                                                     aria-hidden="true"
@@ -253,7 +253,7 @@ export default function Sidebar() {
                                 </ul>
                             </li>
                             <li>
-                                <div className="text-xs font-semibold leading-6 text-neutral-400">Management</div>
+                                <div className="text-xs font-semibold leading-6 text-neutral-500">Management</div>
                                 <ul role="list" className="-mx-2 mt-2 space-y-1">
                                     {secondaryNavigation.map((item) => (
                                         <li key={item.name}>
@@ -261,14 +261,14 @@ export default function Sidebar() {
                                                 href={item.href}
                                                 className={classNames(
                                                     item.current
-                                                        ? 'bg-neutral-50 text-cyan-600'
-                                                        : 'text-neutral-700 hover:text-cyan-600 hover:bg-neutral-50',
+                                                        ? 'bg-neutral-50 text-cyan-700'
+                                                        : 'text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50',
                                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                 )}
                                             >
                                                 <item.icon
                                                     className={classNames(
-                                                        item.current ? 'text-cyan-600' : 'text-neutral-400 group-hover:text-cyan-600',
+                                                        item.current ? 'text-cyan-700' : 'text-neutral-500 group-hover:text-cyan-700',
                                                         'h-6 w-6 shrink-0'
                                                     )}
                                                     aria-hidden="true"
@@ -287,14 +287,14 @@ export default function Sidebar() {
                                                 href={item.href}
                                                 className={classNames(
                                                     item.current
-                                                        ? 'bg-neutral-50 text-cyan-600'
-                                                        : 'text-neutral-700 hover:text-cyan-600 hover:bg-neutral-50',
+                                                        ? 'bg-neutral-50 text-cyan-700'
+                                                        : 'text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50',
                                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                 )}
                                             >
                                                 <item.icon
                                                     className={classNames(
-                                                        item.current ? 'text-cyan-600' : 'text-neutral-400 group-hover:text-cyan-600',
+                                                        item.current ? 'text-cyan-700' : 'text-neutral-500 group-hover:text-cyan-700',
                                                         'h-6 w-6 shrink-0'
                                                     )}
                                                     aria-hidden="true"
@@ -306,7 +306,7 @@ export default function Sidebar() {
                                 </ul>
                             </li>
                             <li>
-                                <div className="text-xs text-neutral-400 mb-6 text-center">Server Version: {version}</div>
+                                <div className="text-xs text-neutral-500 mb-6 text-center">Server Version: {version}</div>
                             </li>
                         </ul>
                     </nav>
@@ -334,19 +334,19 @@ export default function Sidebar() {
                                     Search
                                 </label>
                                 <MagnifyingGlassIcon
-                                    className="pointer-events-none absolute inset-y-0 left-0 h-full w-5 text-neutral-400"
+                                    className="pointer-events-none absolute inset-y-0 left-0 h-full w-5 text-neutral-500"
                                     aria-hidden="true"
                                 />
                                 <input
                                     id="search-field"
-                                    className="block h-full w-full border-0 py-0 pl-8 pr-0 text-neutral-900 placeholder:text-neutral-400 focus:ring-0 sm:text-sm"
+                                    className="block h-full w-full border-0 py-0 pl-8 pr-0 text-neutral-900 placeholder:text-neutral-500 focus:ring-0 sm:text-sm"
                                     placeholder="Search..."
                                     type="search"
                                     name="search"
                                 />
                             </form>
                             <div className="flex items-center gap-x-4 lg:gap-x-6">
-                                <button type="button" className="-m-2.5 p-2.5 text-neutral-400 hover:text-neutral-500">
+                                <button type="button" className="-m-2.5 p-2.5 text-neutral-500 hover:text-neutral-500">
                                     <span className="sr-only">View notifications</span>
                                     <BellIcon className="h-6 w-6" aria-hidden="true" />
                                 </button>
@@ -358,12 +358,12 @@ export default function Sidebar() {
                                 <Menu as="div" className="relative">
                                     <Menu.Button className="-m-1.5 flex items-center p-1.5">
                                         <span className="sr-only">Open user menu</span>
-                                        <UserCircleIcon className="h-8 w-8 text-neutral-400" aria-hidden="true" />
+                                        <UserCircleIcon className="h-8 w-8 text-neutral-500" aria-hidden="true" />
                                         <span className="hidden lg:flex lg:items-center">
                                             <span className="ml-4 text-sm font-semibold leading-6 text-neutral-900" aria-hidden="true">
                                                 Welcome, Tom Cook
                                             </span>
-                                            <ChevronDownIcon className="ml-2 h-5 w-5 text-neutral-400" aria-hidden="true" />
+                                            <ChevronDownIcon className="ml-2 h-5 w-5 text-neutral-500" aria-hidden="true" />
                                         </span>
                                     </Menu.Button>
                                     <Transition

@@ -2,7 +2,8 @@
 const { version } = require("../../package.json");
 import { Fragment, useState } from "react";
 import { Dialog, Transition, Menu } from "@headlessui/react";
-import LanguagePicker from "./language-picker";
+import LanguagePicker from "@/components/language-picker";
+import { ThemeSelector } from '@/components/theme-selector';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -53,6 +54,7 @@ const secondaryNavigation = [
 ];
 
 const tertiaryNavigation = [
+  { name: "Notifications", href: "#", icon: BellIcon, current: false },
   { name: "Settings", href: "#", icon: Cog6ToothIcon, current: false },
 ];
 
@@ -122,7 +124,7 @@ export default function Sidebar() {
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
                   <div className="flex h-16 shrink-0 items-center">
                     <Image
-                      className="h-8 w-auto"
+                      className="h-8 w-8"
                       src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=700"
                       alt="Your Company"
                       width={32}
@@ -150,7 +152,7 @@ export default function Sidebar() {
                                     item.current
                                       ? "text-cyan-700"
                                       : "text-neutral-500 group-hover:text-cyan-700",
-                                    "h-6 w-6 shrink-0"
+                                    "h-6 w-6 mr-3 shrink-0"
                                   )}
                                   aria-hidden="true"
                                 />
@@ -181,7 +183,7 @@ export default function Sidebar() {
                                     item.current
                                       ? "text-cyan-700"
                                       : "text-neutral-500 group-hover:text-cyan-700",
-                                    "h-6 w-6 shrink-0"
+                                    "h-6 w-6 mr-3 shrink-0"
                                   )}
                                   aria-hidden="true"
                                 />
@@ -193,6 +195,9 @@ export default function Sidebar() {
                       </li>
                       <li className="mt-auto">
                         <ul role="list" className="-mx-2 mt-2 space-y-1">
+                          <li>
+                            <ThemeSelector />
+                          </li>
                           {tertiaryNavigation.map((item) => (
                             <li key={item.name}>
                               <a
@@ -209,7 +214,7 @@ export default function Sidebar() {
                                     item.current
                                       ? "text-cyan-700"
                                       : "text-neutral-500 group-hover:text-cyan-700",
-                                    "h-6 w-6 shrink-0"
+                                    "h-6 w-6 mr-3 shrink-0"
                                   )}
                                   aria-hidden="true"
                                 />
@@ -239,7 +244,7 @@ export default function Sidebar() {
         <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-neutral-200 bg-white px-6">
           <div className="flex h-16 shrink-0 items-center">
             <Image
-              className="h-8 w-auto"
+              className="h-8 w-8"
               src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=700"
               alt="Your Company"
               width={32}
@@ -267,7 +272,7 @@ export default function Sidebar() {
                             item.current
                               ? "text-cyan-700"
                               : "text-neutral-500 group-hover:text-cyan-700",
-                            "h-6 w-6 shrink-0"
+                            "h-6 w-6 mr-3 shrink-0"
                           )}
                           aria-hidden="true"
                         />
@@ -298,7 +303,7 @@ export default function Sidebar() {
                             item.current
                               ? "text-cyan-700"
                               : "text-neutral-500 group-hover:text-cyan-700",
-                            "h-6 w-6 shrink-0"
+                            "h-6 w-6 mr-3 shrink-0"
                           )}
                           aria-hidden="true"
                         />
@@ -310,6 +315,9 @@ export default function Sidebar() {
               </li>
               <li className="mt-auto">
                 <ul role="list" className="-mx-2 mt-2 space-y-1">
+                  <li>
+                    <ThemeSelector />
+                  </li>
                   {tertiaryNavigation.map((item) => (
                     <li key={item.name}>
                       <a
@@ -326,7 +334,7 @@ export default function Sidebar() {
                             item.current
                               ? "text-cyan-700"
                               : "text-neutral-500 group-hover:text-cyan-700",
-                            "h-6 w-6 shrink-0"
+                            "h-6 w-6 mr-3 shrink-0"
                           )}
                           aria-hidden="true"
                         />

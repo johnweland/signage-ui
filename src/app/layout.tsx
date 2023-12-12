@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { Providers } from "@/components/providers";
 import Sidebar from "@/components/sidebar";
+import CookieConsent from "@/components/cookie-consent";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import PrivacyPolicy from "@/components/privacy-policy";
+import SystemNotice from "@/components/sytem-notification";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,15 +23,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full bg-neutral-50">
-      <body className={classNames("h-full", inter.className)}>
-        <div>
-          <Sidebar />
-          <main className="py-10 lg:pl-72">
-            <div className="px-4 sm:px-6 lg:px-8">{children}</div>
-          </main>
-        </div>
-        <PrivacyPolicy />
+    <html lang="en" className="h-full bg-neutral-50 light">
+      <body className={classNames("h-full antialiased", inter.className)}>
+        <SystemNotice />
+        <Providers>
+          <div>
+            <Sidebar />
+            <main className="py-10 lg:pl-72">
+              <div className="px-4 sm:px-6 lg:px-8">{children}</div>
+            </main>
+          </div>
+          <CookieConsent />
+        </Providers>
       </body>
     </html>
   );

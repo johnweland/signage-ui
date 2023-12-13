@@ -1,12 +1,15 @@
 "use client";
-import type { Metadata } from "next";
 import { Providers } from "@/components/providers";
 import { usePathname } from "next/navigation";
+import { ToastContainer } from "react-toastify";
 import Sidebar from "@/components/sidebar";
 import CookieConsent from "@/components/cookie-consent";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import SystemNotice from "@/components/sytem-notification";
+import Notification from "@/components/toast-notification";
+
+import { toast } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,10 +29,11 @@ export default function RootLayout({
     pathname.startsWith("/forgot-password")
   ) {
     return (
-      <html lang="en" className="h-full bg-neutral-50 light">
-        <body className={classNames("h-full antialiased", inter.className)}>
+      <html lang="en" className="h-full light">
+        <body className={classNames("h-full antialiased bg-neutral-50", inter.className)}>
+          <Notification />
           <Providers>
-            <main className="px-4 sm:px-6 lg:px-8">{children}</main>
+            <main className="h-full px-4 sm:px-6 lg:px-8 flex justify-center items-center">{children}</main>
           </Providers>
         </body>
       </html>
@@ -37,8 +41,9 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className="h-full bg-neutral-50 light">
-      <body className={classNames("h-full antialiased", inter.className)}>
+    <html lang="en" className="h-full light">
+      <body className={classNames("h-full antialiased bg-neutral-50", inter.className)}>
+        <Notification />
         <SystemNotice />
         <Providers>
           <div>

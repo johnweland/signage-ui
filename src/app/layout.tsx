@@ -1,7 +1,6 @@
 "use client";
 import { Providers } from "@/components/providers";
 import { usePathname } from "next/navigation";
-import { ToastContainer } from "react-toastify";
 import Sidebar from "@/components/sidebar";
 import CookieConsent from "@/components/cookie-consent";
 import { Inter } from "next/font/google";

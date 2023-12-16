@@ -28,11 +28,18 @@ export default function RootLayout({
     pathname.startsWith("/forgot-password")
   ) {
     return (
-      <html lang="en" className="h-full light">
-        <body className={classNames("h-full antialiased bg-neutral-50", inter.className)}>
+      <html lang="en" className="light h-full">
+        <body
+          className={classNames(
+            "h-full bg-neutral-50 antialiased",
+            inter.className,
+          )}
+        >
           <Notification />
           <Providers>
-            <main className="h-full px-4 sm:px-6 lg:px-8 flex justify-center items-center">{children}</main>
+            <main className="flex h-full items-center justify-center px-4 sm:px-6 lg:px-8">
+              {children}
+            </main>
           </Providers>
         </body>
       </html>
@@ -40,8 +47,13 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className="h-full light">
-      <body className={classNames("h-full antialiased bg-neutral-50", inter.className)}>
+    <html lang="en" className="light h-full">
+      <body
+        className={classNames(
+          "h-full bg-neutral-50 antialiased",
+          inter.className,
+        )}
+      >
         <Notification />
         <SystemNotice />
         <Providers>

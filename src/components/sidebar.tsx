@@ -3,7 +3,7 @@ const { version } = require("../../package.json");
 import { Fragment, useState } from "react";
 import { Dialog, Transition, Menu } from "@headlessui/react";
 import LanguagePicker from "@/components/language-picker";
-import { ThemeSelector } from '@/components/theme-selector';
+import { ThemeSelector } from "@/components/theme-selector";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -122,7 +122,7 @@ export default function Sidebar() {
                 </Transition.Child>
                 {/* Sidebar component, swap this element with another sidebar if you like */}
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
-                  <div className="flex h-16 shrink-0 justify-center items-center">
+                  <div className="flex h-16 shrink-0 items-center justify-center">
                     <Image
                       className="h-10 w-10"
                       src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=700"
@@ -143,8 +143,8 @@ export default function Sidebar() {
                                 className={classNames(
                                   item.current
                                     ? "bg-neutral-50 text-cyan-700"
-                                    : "text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50",
-                                  "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                    : "text-neutral-700 hover:bg-neutral-50 hover:text-cyan-700",
+                                  "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                                 )}
                               >
                                 <item.icon
@@ -152,7 +152,7 @@ export default function Sidebar() {
                                     item.current
                                       ? "text-cyan-700"
                                       : "text-neutral-500 group-hover:text-cyan-700",
-                                    "h-6 w-6 mr-3 shrink-0"
+                                    "mr-3 h-6 w-6 shrink-0",
                                   )}
                                   aria-hidden="true"
                                 />
@@ -174,8 +174,8 @@ export default function Sidebar() {
                                 className={classNames(
                                   item.current
                                     ? "bg-neutral-50 text-cyan-700"
-                                    : "text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50",
-                                  "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                    : "text-neutral-700 hover:bg-neutral-50 hover:text-cyan-700",
+                                  "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                                 )}
                               >
                                 <item.icon
@@ -183,7 +183,7 @@ export default function Sidebar() {
                                     item.current
                                       ? "text-cyan-700"
                                       : "text-neutral-500 group-hover:text-cyan-700",
-                                    "h-6 w-6 mr-3 shrink-0"
+                                    "mr-3 h-6 w-6 shrink-0",
                                   )}
                                   aria-hidden="true"
                                 />
@@ -205,8 +205,8 @@ export default function Sidebar() {
                                 className={classNames(
                                   item.current
                                     ? "bg-neutral-50 text-cyan-700"
-                                    : "text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50",
-                                  "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                    : "text-neutral-700 hover:bg-neutral-50 hover:text-cyan-700",
+                                  "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                                 )}
                               >
                                 <item.icon
@@ -214,7 +214,7 @@ export default function Sidebar() {
                                     item.current
                                       ? "text-cyan-700"
                                       : "text-neutral-500 group-hover:text-cyan-700",
-                                    "h-6 w-6 mr-3 shrink-0"
+                                    "mr-3 h-6 w-6 shrink-0",
                                   )}
                                   aria-hidden="true"
                                 />
@@ -225,7 +225,7 @@ export default function Sidebar() {
                         </ul>
                       </li>
                       <li>
-                        <div className="text-xs text-neutral-500 mb-6 text-center">
+                        <div className="mb-6 text-center text-xs text-neutral-500">
                           Server Version: {version}
                         </div>
                       </li>
@@ -242,7 +242,7 @@ export default function Sidebar() {
       <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-neutral-200 bg-white px-6">
-          <div className="flex h-16 shrink-0 justify-center items-center">
+          <div className="flex h-16 shrink-0 items-center justify-center">
             <Image
               className="h-10 w-10"
               src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=700"
@@ -263,8 +263,8 @@ export default function Sidebar() {
                         className={classNames(
                           item.current
                             ? "bg-neutral-50 text-cyan-700"
-                            : "text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50",
-                          "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                            : "text-neutral-700 hover:bg-neutral-50 hover:text-cyan-700",
+                          "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                         )}
                       >
                         <item.icon
@@ -272,7 +272,7 @@ export default function Sidebar() {
                             item.current
                               ? "text-cyan-700"
                               : "text-neutral-500 group-hover:text-cyan-700",
-                            "h-6 w-6 mr-3 shrink-0"
+                            "mr-3 h-6 w-6 shrink-0",
                           )}
                           aria-hidden="true"
                         />
@@ -294,8 +294,8 @@ export default function Sidebar() {
                         className={classNames(
                           item.current
                             ? "bg-neutral-50 text-cyan-700"
-                            : "text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50",
-                          "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                            : "text-neutral-700 hover:bg-neutral-50 hover:text-cyan-700",
+                          "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                         )}
                       >
                         <item.icon
@@ -303,7 +303,7 @@ export default function Sidebar() {
                             item.current
                               ? "text-cyan-700"
                               : "text-neutral-500 group-hover:text-cyan-700",
-                            "h-6 w-6 mr-3 shrink-0"
+                            "mr-3 h-6 w-6 shrink-0",
                           )}
                           aria-hidden="true"
                         />
@@ -325,8 +325,8 @@ export default function Sidebar() {
                         className={classNames(
                           item.current
                             ? "bg-neutral-50 text-cyan-700"
-                            : "text-neutral-700 hover:text-cyan-700 hover:bg-neutral-50",
-                          "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                            : "text-neutral-700 hover:bg-neutral-50 hover:text-cyan-700",
+                          "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                         )}
                       >
                         <item.icon
@@ -334,7 +334,7 @@ export default function Sidebar() {
                             item.current
                               ? "text-cyan-700"
                               : "text-neutral-500 group-hover:text-cyan-700",
-                            "h-6 w-6 mr-3 shrink-0"
+                            "mr-3 h-6 w-6 shrink-0",
                           )}
                           aria-hidden="true"
                         />
@@ -345,7 +345,7 @@ export default function Sidebar() {
                 </ul>
               </li>
               <li>
-                <div className="text-xs text-neutral-500 mb-6 text-center">
+                <div className="mb-6 text-center text-xs text-neutral-500">
                   Server Version: {version}
                 </div>
               </li>
@@ -437,7 +437,7 @@ export default function Sidebar() {
                               href={item.href}
                               className={classNames(
                                 active ? "bg-neutral-50" : "",
-                                "block px-3 py-1 text-sm leading-6 text-neutral-900"
+                                "block px-3 py-1 text-sm leading-6 text-neutral-900",
                               )}
                             >
                               {item.name}

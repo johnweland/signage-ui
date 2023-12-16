@@ -11,7 +11,7 @@ export default function SignIn() {
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <div className="sm:mx-auto w-full max-w-lg">
+        <div className="w-full max-w-lg sm:mx-auto">
           <Image
             className="mx-auto h-20 w-20"
             src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=700"
@@ -25,7 +25,7 @@ export default function SignIn() {
           </h2>
         </div>
 
-        <div className="mt-10 sm:mx-auto w-full max-w-lg">
+        <div className="mt-10 w-full max-w-lg sm:mx-auto">
           <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
             <SignInForm />
           </div>

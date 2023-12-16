@@ -27,7 +27,7 @@ export default function LanguagePicker() {
     <>
       <button
         type="button"
-        className="rounded bg-gradient-to-br from-cyan-800 to-cyan-600 border  px-2 py-1 text-xs font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
+        className="rounded border bg-gradient-to-br from-cyan-800 to-cyan-600  px-2 py-1 text-xs font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
         onClick={() => setShowModal(true)}
       >
         {selected.code}
@@ -58,7 +58,7 @@ export default function LanguagePicker() {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="relative flex flex-col justify-center transform rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl sm:p-6">
+                  <Dialog.Panel className="relative flex transform flex-col justify-center rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl sm:p-6">
                     <div>
                       <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-cyan-800">
                         <LanguageIcon
@@ -107,7 +107,7 @@ export default function LanguagePicker() {
                                               active
                                                 ? "bg-cyan-700 text-white"
                                                 : "text-gray-900",
-                                              "relative cursor-default select-none py-2 pl-3 pr-9"
+                                              "relative cursor-default select-none py-2 pl-3 pr-9",
                                             )
                                           }
                                           value={language}
@@ -119,7 +119,7 @@ export default function LanguagePicker() {
                                                   selected
                                                     ? "font-semibold"
                                                     : "font-normal",
-                                                  "block truncate"
+                                                  "block truncate",
                                                 )}
                                               >
                                                 {language.name}
@@ -131,7 +131,7 @@ export default function LanguagePicker() {
                                                     active
                                                       ? "text-white"
                                                       : "text-cyan-700",
-                                                    "absolute inset-y-0 right-0 flex items-center pr-4"
+                                                    "absolute inset-y-0 right-0 flex items-center pr-4",
                                                   )}
                                                 >
                                                   <CheckIcon
@@ -154,7 +154,7 @@ export default function LanguagePicker() {
                         </div>
                       </div>
                     </div>
-                    <div className="mt-5 sm:mt-6 w-full max-w-sm mx-auto">
+                    <div className="mx-auto mt-5 w-full max-w-sm sm:mt-6">
                       <button
                         type="button"
                         className="inline-flex w-full max-w-sm justify-center rounded-md bg-gradient-to-br from-cyan-800 to-cyan-600 px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"

@@ -1,81 +1,97 @@
-import { useEffect, useState } from 'react'
-import { useTheme } from 'next-themes'
-import { Switch } from '@headlessui/react'
-
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import { Switch } from "@headlessui/react";
 
 const themes = [
-  { name: 'Light', value: 'light' },
-  { name: 'Dark', value: 'dark'}
-]
+  { name: "Light", value: "light" },
+  { name: "Dark", value: "dark" },
+];
 
 function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ')
-  }
+  return classes.filter(Boolean).join(" ");
+}
 
 export function ThemeSelector() {
-  let { theme, setTheme } = useTheme()
-  const [enabled, setEnabled] = useState(false)
-  let [mounted, setMounted] = useState(false)
+  let { theme, setTheme } = useTheme();
+  const [enabled, setEnabled] = useState(false);
+  let [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-    setEnabled(theme === 'dark')
-  }, [])
+    setMounted(true);
+    setEnabled(theme === "dark");
+  }, []);
 
   if (!mounted) {
-    return <div className="h-6 w-6" />
+    return <div className="h-6 w-6" />;
   }
 
   return (
     <Switch.Group as="div" className="flex items-center">
-    <Switch
-      checked={enabled}
-      onChange={()=>{setEnabled(!enabled); setTheme(theme === 'dark' ? 'light' : 'dark')}}
-      className={classNames(
-        enabled ? 'bg-gradient-to-br from-cyan-800 to-cyan-600' : 'bg-neutral-200',
-        'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 dark:border-neutral-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-cyan-800 focus:ring-offset-2'
-      )}
-    >
-      <span className="sr-only">Use setting</span>
-      <span
+      <Switch
+        checked={enabled}
+        onChange={() => {
+          setEnabled(!enabled);
+          setTheme(theme === "dark" ? "light" : "dark");
+        }}
         className={classNames(
-          enabled ? 'translate-x-5' : 'translate-x-0',
-          'pointer-events-none relative inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
+          enabled
+            ? "bg-gradient-to-br from-cyan-800 to-cyan-600"
+            : "bg-neutral-200",
+          "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-cyan-800 focus:ring-offset-2 dark:border-neutral-200",
         )}
       >
+        <span className="sr-only">Use setting</span>
         <span
           className={classNames(
-            enabled ? 'opacity-0 duration-100 ease-out' : 'opacity-100 duration-200 ease-in',
-            'absolute inset-0 flex h-full w-full items-center justify-center transition-opacity'
+            enabled ? "translate-x-5" : "translate-x-0",
+            "pointer-events-none relative inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out",
           )}
-          aria-hidden="true"
         >
-          <svg className="h-3 w-3 text-neutral-400" fill="none" viewBox="0 0 12 12">
-            <path
-              d="M4 8l2-2m0 0l2-2M6 6L4 4m2 2l2 2"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <span
+            className={classNames(
+              enabled
+                ? "opacity-0 duration-100 ease-out"
+                : "opacity-100 duration-200 ease-in",
+              "absolute inset-0 flex h-full w-full items-center justify-center transition-opacity",
+            )}
+            aria-hidden="true"
+          >
+            <svg
+              className="h-3 w-3 text-neutral-400"
+              fill="none"
+              viewBox="0 0 12 12"
+            >
+              <path
+                d="M4 8l2-2m0 0l2-2M6 6L4 4m2 2l2 2"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
+          <span
+            className={classNames(
+              enabled
+                ? "opacity-100 duration-200 ease-in"
+                : "opacity-0 duration-100 ease-out",
+              "absolute inset-0 flex h-full w-full items-center justify-center transition-opacity",
+            )}
+            aria-hidden="true"
+          >
+            <svg
+              className="h-3 w-3 text-cyan-800"
+              fill="currentColor"
+              viewBox="0 0 12 12"
+            >
+              <path d="M3.707 5.293a1 1 0 00-1.414 1.414l1.414-1.414zM5 8l-.707.707a1 1 0 001.414 0L5 8zm4.707-3.293a1 1 0 00-1.414-1.414l1.414 1.414zm-7.414 2l2 2 1.414-1.414-2-2-1.414 1.414zm3.414 2l4-4-1.414-1.414-4 4 1.414 1.414z" />
+            </svg>
+          </span>
         </span>
-        <span
-          className={classNames(
-            enabled ? 'opacity-100 duration-200 ease-in' : 'opacity-0 duration-100 ease-out',
-            'absolute inset-0 flex h-full w-full items-center justify-center transition-opacity'
-          )}
-          aria-hidden="true"
-        >
-          <svg className="h-3 w-3 text-cyan-800" fill="currentColor" viewBox="0 0 12 12">
-            <path d="M3.707 5.293a1 1 0 00-1.414 1.414l1.414-1.414zM5 8l-.707.707a1 1 0 001.414 0L5 8zm4.707-3.293a1 1 0 00-1.414-1.414l1.414 1.414zm-7.414 2l2 2 1.414-1.414-2-2-1.414 1.414zm3.414 2l4-4-1.414-1.414-4 4 1.414 1.414z" />
-          </svg>
-        </span>
-      </span>
-    </Switch>
-    <Switch.Label as="span" className="ml-3 text-sm">
+      </Switch>
+      <Switch.Label as="span" className="ml-3 text-sm">
         <span className="font-medium text-neutral-900">Dark Mode</span>
       </Switch.Label>
     </Switch.Group>
-  )
+  );
 }

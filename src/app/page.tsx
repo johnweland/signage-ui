@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="w-auto xl:max-w-7xl mx-auto">
+    <div className="mx-auto w-auto xl:max-w-7xl">
       <section className="mb-5">
         <div className="relative">
           <div
@@ -69,10 +69,10 @@ export default function Home() {
               key={item.name}
               className="overflow-hidden rounded-lg bg-gradient-to-br from-cyan-800 to-cyan-600 px-4 py-5 shadow sm:p-6"
             >
-              <dt className="truncate text-sm font-medium text-neutral-50 text-center">
+              <dt className="truncate text-center text-sm font-medium text-neutral-50">
                 {item.name}
               </dt>
-              <dd className="mt-1 text-3xl font-semibold tracking-tight text-neutral-50 text-center">
+              <dd className="mt-1 text-center text-3xl font-semibold tracking-tight text-neutral-50">
                 {item.stat}
               </dd>
             </div>
@@ -94,7 +94,7 @@ export default function Home() {
           </div>
         </div>
         <div className="my-9">
-          <p className="text-xs text-neutral-500 text-center">
+          <p className="text-center text-xs text-neutral-500">
             No players have missed check-in
           </p>
         </div>
